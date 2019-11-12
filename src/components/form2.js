@@ -19,7 +19,7 @@ class Form extends Component {
       .then(res => res.json())
 
       .then((data) => {
-          fetch( PROXY + weatherAPI + data[0].woeid )
+          fetch( weatherAPI + data[0].woeid )
           .then( res => res.json())
           
           .then ((data) => {
