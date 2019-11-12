@@ -1,8 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+// import Form from './components/form';
+import Form from './components/form2';
+
+const App = () => (
+	<div className="app">
+		<h1>Welcome to Sweater Weather!</h1>
+
+		<Form />
+
+		<div className="response">
+
+		</div>
+		
+	</div>
+)
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
