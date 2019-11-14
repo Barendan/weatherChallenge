@@ -52,7 +52,7 @@ class FormContainer extends Component {
   displayWeather = () => {
     return this.state.weatherForecast.length > 1 ?
       <div className="weatherCardList mt-5">
-          <center><h1 className="weatherTitle">Weather for {this.state.data.title} </h1></center>
+          <center><h2 className="font-weight-300">Weather Forecast for {this.state.data.title} </h2></center>
           <WeatherCard weatherForecast={this.state.weatherForecast} />
       </div>
     : null

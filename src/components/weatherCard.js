@@ -27,15 +27,18 @@ const WeatherCard = ( props ) => {
 			  		{item.applicable_date}
 			  	</h6>
 			  	<div className="card-body px-1">
+				    <h5 className="card-title">
+				    	{item.weather_state_name}
+				    	<img src={`https://www.metaweather.com//static/img/weather/png/64/${item.weather_state_abbr}.png`}/>
+				    </h5>
 			    	<h5 className="card-title">
 			    		Temp:{convertTemp(item.the_temp)}
 			    	</h5>
 			    	<h6 className="card-subtitle mb-2 text-muted"> 
-			    		Lo:{convertTemp(item.min_temp)} - Hi:{convertTemp(item.max_temp)}
+			    		Lo: {convertTemp(item.min_temp)} - Hi: {convertTemp(item.max_temp)}
 			    	</h6>
 
-				    <h5 className="card-title">{item.weather_state_name}</h5>
-				    <h5 className="card-title">{item.humidity}</h5>
+				    <h5 className="card-title">Humidity: {item.humidity}</h5>
 				    <p className="card-text"></p>
 			  	</div>
 			</div>

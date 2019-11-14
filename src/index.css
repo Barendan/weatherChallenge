@@ -88,13 +88,19 @@ code {
 
 
 
-
-
 .app {
 	text-align:center;
 }
 
-.weatherTitle {
-    font-weight:300;
-}
-
+/*.card::after {
+    content: "";
+    background-image: url(https://www.metaweather.com/static/img/weather/s.svg);
+    opacity: 0.2; 
+    background-position: top;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}*/
