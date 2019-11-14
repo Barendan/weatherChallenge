@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-
-
 const WeatherCard = ( props ) => {
 
 	const convertTemp = (celsius) => {
@@ -41,16 +39,13 @@ const WeatherCard = ( props ) => {
 				    <h5 className="card-title font-weight-normal">Humidity:{" "}{item.humidity}{'\u0025'}</h5>
 			  	</div>
 			</div>
-
 		))
 		return template
 	}
-
 	return (
 	    <div className="row">
 	    	{ createWeatherCard() }
 	    </div>
-  )
+  	)
 };
-
 export default WeatherCard

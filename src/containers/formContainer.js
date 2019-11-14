@@ -50,45 +50,42 @@ class FormContainer extends Component {
 
     displayWeather = () => {
         return this.state.weatherForecast.length > 1 ?
-          <div className="weatherCardList mt-5">
-              <center><h2 className="font-weight-300">Weather Forecast for {this.state.data.title} </h2></center>
-              <WeatherCard weatherForecast={this.state.weatherForecast} />
-          </div>
+            <div className="weatherCardList mt-5">
+                <center><h2 className="font-weight-300">
+                    Weather Forecast for {this.state.data.title} 
+                </h2></center>
+                <WeatherCard weatherForecast={this.state.weatherForecast} />
+            </div>
         : null
     }
 
-  render() {
-    return (
-      <form className="container-fluid mx-auto mt-5" onSubmit={this.handleFormSubmit}>
-        
-        <div className="form-group row mx-5">
-          <label className="col-sm-2 col-form-label">
-            Check Weather: 
-          </label>
+    render() {
+        return (
+            <form className="container-fluid mx-auto mt-5" onSubmit={this.handleFormSubmit}>
+              <div className="form-group row mx-5">
+                  <label className="col-sm-2 col-form-label">
+                      Check Weather: 
+                  </label>
 
-          <input
-            className="form-control col-sm-6"
-            id="city"
-            name="city"
-            type="text"
-            value={this.state.city}
-            onChange={this.handleInput}
-            placeholder="Enter a city name"
-          />
-
-          <button
-            className="btn btn-primary col-sm-3 ml-4"
-            onClick={this.handleFormSubmit}
-          >
-            Submit
-          </button>
-        </div>
-
-        { this.displayWeather() }
-
-      </form>
-    );
-  }
+                  <input
+                      className="form-control col-sm-6"
+                      id="city"
+                      name="city"
+                      type="text"
+                      value={this.state.city}
+                      onChange={this.handleInput}
+                      placeholder="Enter a city name"
+                  />
+                  <button
+                    className="btn btn-primary col-sm-3 ml-4"
+                    onClick={this.handleFormSubmit}
+                  >
+                      Search
+                  </button>
+              </div>
+              { this.displayWeather() }
+            </form>
+        );
+    }
 }
-
 export default FormContainer;
