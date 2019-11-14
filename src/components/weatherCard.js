@@ -12,7 +12,9 @@ const WeatherCard = ( props ) => {
 	const getDay = (date) => {
 		let parsedDate = new Date(date);
 		let options = { weekday: 'long'};
-		return new Intl.DateTimeFormat('en-US', options).format(parsedDate);
+		parsedDate.setDate(parsedDate.getDate() + 1);
+		let dayName = new Intl.DateTimeFormat('en-US', options).format(parsedDate);
+		return dayName
 	}
 
 	const createWeatherCard = () => {
@@ -28,7 +30,7 @@ const WeatherCard = ( props ) => {
 				    <h5 className="card-title">
 				    	{item.weather_state_name}
 				    </h5>
-				    	<img src={`https://www.metaweather.com//static/img/weather/png/64/${item.weather_state_abbr}.png`}/>
+				    	<img alt="weather graphic" src={`https://www.metaweather.com//static/img/weather/png/64/${item.weather_state_abbr}.png`}/>
 			    	<h5 className="card-title">
 			    		Temp:{" "}{convertTemp(item.the_temp)}{'\u2109'}
 			    	</h5>
