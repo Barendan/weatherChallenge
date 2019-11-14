@@ -36,9 +36,6 @@ code {
 }
 
 
-
-
-
 .app-border {
     position: fixed;
     z-index: 10010;
@@ -95,5 +92,9 @@ code {
 
 .app {
 	text-align:center;
+}
+
+.weatherTitle {
+    font-weight:300;
 }
 
