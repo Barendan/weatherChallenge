@@ -29,8 +29,8 @@ const WeatherCard = ( props ) => {
 			  	<div className="card-body px-1">
 				    <h5 className="card-title">
 				    	{item.weather_state_name}
-				    	<img src={`https://www.metaweather.com//static/img/weather/png/64/${item.weather_state_abbr}.png`}/>
 				    </h5>
+				    	<img src={`https://www.metaweather.com//static/img/weather/png/64/${item.weather_state_abbr}.png`}/>
 			    	<h5 className="card-title">
 			    		Temp:{" "}{convertTemp(item.the_temp)}{'\u2109'}
 			    	</h5>
@@ -38,8 +38,7 @@ const WeatherCard = ( props ) => {
 			    		Lo:{" "}{convertTemp(item.min_temp)}{'\u2109'} - Hi:{" "}{convertTemp(item.max_temp)}{'\u2109'}
 			    	</h6>
 
-				    <h5 className="card-title">Humidity:{" "}{item.humidity}{'\u0025'}</h5>
-				    <p className="card-text"></p>
+				    <h5 className="card-title font-weight-normal">Humidity:{" "}{item.humidity}{'\u0025'}</h5>
 			  	</div>
 			</div>
 
