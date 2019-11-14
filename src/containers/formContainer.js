@@ -64,7 +64,7 @@ class FormContainer extends Component {
         
         <div className="form-group row mx-5">
           <label className="col-sm-2 col-form-label">
-            City Name: 
+            Check Weather: 
           </label>
 
           <input
@@ -74,9 +74,9 @@ class FormContainer extends Component {
             type="text"
             value={this.state.city}
             onChange={this.handleInput}
-            placeholder="Enter a city"
+            placeholder="Enter a city name"
           />
-          
+
           <button
             className="btn btn-primary col-sm-3 ml-4"
             onClick={this.handleFormSubmit}
